@@ -43,6 +43,14 @@
                             </form>
                         @endguest
                     </div>
+                    <ul>
+                        <li class="nav-item">
+                            <a href="{{ route('pages.home') }}"
+                              class="nav-link" {{ setActiveRoute('pages.home') }}>
+                              Blog
+                            </a>
+                          </li>
+                    </ul>
                 </div>
             </div>
         </nav>

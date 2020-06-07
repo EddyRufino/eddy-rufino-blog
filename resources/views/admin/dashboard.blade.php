@@ -1,5 +1,5 @@
 @extends('admin.layout')
 
 @section('content')
-  <span>dashboard</span>
+    <h1>Dashboard</h1>
 @endsection

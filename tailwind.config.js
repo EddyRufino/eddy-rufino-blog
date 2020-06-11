@@ -8,7 +8,7 @@ module.exports = {
       display: ['responsive', 'hover', 'focus'],
     },
     screens: {
-      'xm': '320px',
+      // 'xm': '320px',
       // => @media (min-width: 320px) { ... }
 
       'sm': '640px',

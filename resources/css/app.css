@@ -9,3 +9,10 @@
     width: 20rem;
   }
  }
+
+ /* Mover la imagen de la cabecera */
+@media (min-width: 1024px) { 
+  .image-header {
+    margin-top: 60px;
+  }
+ }

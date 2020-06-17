@@ -1,4 +1,4 @@
-<div class="tags container-flex">
+{{-- <div class="tags container-flex"> --}}
 
 {{--   @foreach ($post->tags as $tag)
     <span class="tag c-gray-1 text-capitalize">
@@ -8,12 +8,12 @@
 
 @if ($post->category)
 
-    <div class="post-category">
-      <span  class="category">
-        <a class="text-muted" href="{{ route('categories.show', $post->category) }}">{{ $post->category->name }}</a>
-      </span>
-    </div>
+    {{-- <div class="post-category"> --}}
+      {{-- <span  class="category"> --}}
+        <a class="inline-block" href="{{ route('categories.show', $post->category) }}">{{ $post->category->name }}</a>
+      {{-- </span> --}}
+    {{-- </div> --}}
 
  @endif
 
-</div>
+{{-- </div> --}}

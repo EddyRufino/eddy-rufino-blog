@@ -16,3 +16,46 @@
     margin-top: 60px;
   }
  }
+
+ /* Ancho al card */
+@media (min-width: 768px) { 
+  .card {
+    width: 50%
+  }
+ }
+
+ /* Ancho al card */
+@media (min-width: 1024px) { 
+  .card {
+    width: 70%
+  }
+ }
+
+  /* Ancho al card */
+@media (min-width: 1280px) {
+  .card {
+    width: 50%
+  }
+}
+
+
+ /* Ancho al card blog show */
+ @media (min-width: 768px) { 
+  .card-blog-show {
+    width: 80%
+  }
+ }
+
+ /* Ancho al card blog show */
+@media (min-width: 1024px) { 
+  .card-blog-show {
+    width: 65%
+  }
+ }
+
+  /* Ancho al card blog show */
+@media (min-width: 1280px) {
+  .card-blog-show {
+    width: 60%
+  }
+}

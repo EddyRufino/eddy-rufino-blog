@@ -18187,6 +18187,23 @@ video {
   }
 }
 
+pre {
+  /* background-color: #1A202C;
+  padding: 4px 5px;
+  color: #EDF2F7; */
+  background-color: #212121;
+  color: #eee;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 17px;
+  line-height: 1.8em;
+  overflow-x: auto;
+}
+
+/* pre:hover {
+  overflow-x: auto;
+} */
+
 @media (min-width: 640px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;

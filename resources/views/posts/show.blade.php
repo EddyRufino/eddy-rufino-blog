@@ -9,7 +9,7 @@
     <div class="content-post">
 
     <div class="text-center pt-8 md:pt-0">
-      <img class="w-10 pb-1 rounded-full mx-auto" src="/img/avatar.svg" alt="nombre">
+      <img class="w-10 pb-1 rounded-full mx-auto" src="/img/yo.svg" alt="nombre">
       <span class="font-serif text-gray-700"> {{ $post->owner->name }}</span>
     </div>
 

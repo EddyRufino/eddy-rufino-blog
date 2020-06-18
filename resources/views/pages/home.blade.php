@@ -33,7 +33,7 @@
           <p class="text-gray-700 text-base">{{ $post->excerpt }}</p>
         </div>
         <div class="flex items-center">
-          <img class="w-10 h-10 rounded-full mr-4" src="/img/avatar.svg" alt="Avatar of Jonathan Reinink">
+          <img class="w-10 h-10 rounded-full mr-4" src="/img/yo.svg" alt="Avatar of Jonathan Reinink">
           <div class="text-sm">
             <p class="text-gray-900 leading-none">{{ $post->owner->name }}</p>
             <p class="text-gray-600">{{ optional($post->published_at)->format('M d') }}</p>

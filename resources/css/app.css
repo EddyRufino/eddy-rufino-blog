@@ -76,3 +76,10 @@ pre {
 /* pre:hover {
   overflow-x: auto;
 } */
+
+/* Imagen de yo */
+@media (max-width: 640px) {
+  .yo-movil {
+    height: 6rem;
+  }
+}

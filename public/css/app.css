@@ -18204,6 +18204,14 @@ pre {
   overflow-x: auto;
 } */
 
+/* Imagen de yo */
+
+@media (max-width: 640px) {
+  .yo-movil {
+    height: 6rem;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;

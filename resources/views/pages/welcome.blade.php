@@ -38,23 +38,12 @@
   </div>  
 </div>
 
-<div class="bg-gray-100 p-3">
+<div class="mb-8 leading-normal text-xl text-gray-800 bg-gray-100 p-3 flex items-center flex-col justify-center">
   <h1 class="mb-2 font-bold text-gray-800 text-3xl">Mi trabajo</h1>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <p>Estoy trabajando en eso.</p>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<footer class="flex items-center justify-center leading-normal text-md text-gray-800">
+  <p>{{ config('app.name') }} | Copyright {{ date('Y') }}</p>
+</footer>
 @endsection

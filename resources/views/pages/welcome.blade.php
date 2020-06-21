@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('welcome')
 <div class="bg-gray-100 pt-20 lg:pt-28 w-full mx-auto">
   <header class="bg-gray-100 px-8 py-4 md:pt-12 lg:pt-12 xl:pt-20">
     

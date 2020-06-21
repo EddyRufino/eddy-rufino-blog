@@ -12,6 +12,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
@@ -36,7 +37,6 @@
       }
       
     </style> --}}
-
 </head>
 <body class="h-screen antialiased leading-none">
 
@@ -51,6 +51,12 @@
           </svg>
         </button>
       </div>
+
+      <button class="switch" id="switch">
+        <span><i class="fas fa-sun"></i></span>
+        <span><i class="fas fa-moon"></i></span>
+      </button>
+
       <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
 
         <div class="hidden md:flex">
@@ -105,8 +111,14 @@
     </div>
 </div>
 
+{{-- Aquí lo envuelvo en #app porque Vue lo necesita para funcionar --}}
 <div id="app">
-    @yield('content')
+  @yield('welcome')
 </div>
+
+{{-- Aqui no lo envuelvo porque no funciona al momento de mostrar código en ckEditor --}}
+  @yield('content')
+
+
 </body>
 </html>

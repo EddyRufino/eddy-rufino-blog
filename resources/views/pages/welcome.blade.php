@@ -38,10 +38,7 @@
   </div>  
 </div>
 
-<div class="mb-8 leading-normal text-xl text-gray-800 bg-gray-100 p-3 flex items-center flex-col justify-center">
-  <h1 class="mb-2 font-bold text-gray-800 text-3xl">Mi trabajo</h1>
-  <p>Estoy trabajando en eso.</p>
-</div>
+  <githubs></githubs>
 
 <footer class="flex items-center justify-center leading-normal text-md text-gray-800">
   <p>{{ config('app.name') }} | Copyright {{ date('Y') }}</p>

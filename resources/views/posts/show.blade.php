@@ -9,8 +9,8 @@
     <div class="content-post">
 
     <div class="text-center pt-8 md:pt-0">
-      <img class="w-10 pb-1 rounded-full mx-auto" src="/img/yo.svg" alt="nombre">
-      <span class="font-serif text-gray-700"> {{ $post->owner->name }}</span>
+      <img class="w-10 pb-1 rounded-full mx-auto" src="/img/yo.svg" alt="nombre"></img>
+      <span class="font-serif text-gray-700">{{ $post->owner->name }}</span>
     </div>
 
     <h1 class="pt-3 text-4xl text-center font-semibold leading-snug break-all font-serif text-gray-800">{{ $post->title }}</h1>
@@ -19,7 +19,7 @@
       <div class="flex items-center justify-center py-3">
         <span class="pr-2 flex text-gray-700 text-sm items-center">
           <svg class="fill-current text-gray-500 w-5 h-5" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="12px" height="12px">
-            <defs><style>.cls-1{fill:#606161;}</style></defs><title/><g data-name="Layer 11" id="Layer_11"><path class="cls-1" d="M16,5A11,11,0,1,0,27,16,11,11,0,0,0,16,5Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,16,25Z"/><polygon class="cls-1" points="15 15 9.33 15 9.33 17 17 17 17 8.83 15 8.83 15 15"/></g>
+            <path class="cls-1" d="M16,5A11,11,0,1,0,27,16,11,11,0,0,0,16,5Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,16,25Z"/><polygon class="cls-1" points="15 15 9.33 15 9.33 17 17 17 17 8.83 15 8.83 15 15"/></g>
           </svg>
           3 Min.
         </span>
@@ -35,14 +35,15 @@
       <div class="pt-4 text-center">
         <div class="inline-block pr-1" style="width:2rem">
           <a target="_blank" href="https://www.facebook.com/sharer.php?u={{ request()->fullUrl() }}&quote={{ $post->excerpt }}...">
-            <svg class="fill-current text-gray-800" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m437 0h-362c-41.351562 0-75 33.648438-75 75v362c0 41.351562 33.648438 75 75 75h151v-181h-60v-90h60v-61c0-49.628906 40.371094-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.351562 0 75-33.648438 75-75v-362c0-41.351562-33.648438-75-75-75zm0 0"></path></svg>
+            <svg class="fill-current text-gray-800" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <path d="m437 0h-362c-41.351562 0-75 33.648438-75 75v362c0 41.351562 33.648438 75 75 75h151v-181h-60v-90h60v-61c0-49.628906 40.371094-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.351562 0 75-33.648438 75-75v-362c0-41.351562-33.648438-75-75-75zm0 0"></path>
+            </svg>
           </a>
         </div>
 
         <div class="inline-block pl-1" style="width:2rem">
         <a target="_blank" href="https://twitter.com/intent/tweet?url={{ request()->fullUrl() }}&text={{ $post->excerpt }}... &via={{ config('app.name') }}&hashtags={{ $post->category->name }}">
           <svg class="fill-current text-gray-800" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-            <g><g>
             <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
                   c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
                   c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
@@ -51,7 +52,6 @@
                   c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
                   C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
                   C480.224,136.96,497.728,118.496,512,97.248z"></path>
-            </g></g>
           </svg>
         </a>
         </div>

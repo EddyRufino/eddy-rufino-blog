@@ -18125,6 +18125,12 @@ video {
   transition-delay: 1000ms;
 }
 
+/* @import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities"; */
+
 @media (min-width: 768px) {
   .search {
     width: 20rem;

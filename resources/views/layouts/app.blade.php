@@ -16,7 +16,7 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
-    <style>
+    {{-- <style>
 	
       .duration-200 {
         transition-duration: 200ms;
@@ -35,12 +35,12 @@
         transform: rotate(-180deg);
       }
       
-      </style>
+    </style> --}}
 
 </head>
 <body class="h-screen antialiased leading-none">
 
-  <div class="fixed top-0 w-full text-gray-700 bg-gray-100 dark-mode:text-gray-200 dark-mode:bg-gray-800">
+<div class="fixed top-0 w-full text-gray-700 bg-gray-100 dark-mode:text-gray-200 dark-mode:bg-gray-800">
     <div x-data="{ open: false }" class="border-b-2 border-gray-200 flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 md:py-2">
       <div class="flex flex-row items-center justify-between p-4">
         <a href="/" class="text-lg font-semibold uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><strong class="text-gray-600">ER</strong></a>
@@ -105,7 +105,8 @@
     </div>
 </div>
 
+<div id="app">
     @yield('content')
-
+</div>
 </body>
 </html>

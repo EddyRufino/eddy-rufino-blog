@@ -1,7 +1,7 @@
 <template>
-  <div class="mb-8 leading-normal text-center text-xl text-gray-800 bg-gray-100 p-3 flex items-center flex-col justify-center">
-    <h1 class="font-bold text-gray-800 text-3xl">Mi trabajo</h1>
-    <p class="mb-3">Colaboracón y contribución de código</p>
+  <div id="header" class="mb-8 leading-normal text-center text-xl text-gray-800 bg-gray-100 p-3 flex items-center flex-col justify-center">
+    <h1 id="dark-color-white" class="font-bold text-gray-800 text-3xl">Mi trabajo</h1>
+    <p id="dark-color-white" class="mb-3">Colaboracón y contribución de código</p>
 
     <github
       v-for="(repo, index) in repos" :key="index"

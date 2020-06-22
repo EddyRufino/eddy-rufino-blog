@@ -37,13 +37,18 @@
       }
       
     </style> --}}
+
 </head>
 <body class="h-screen antialiased leading-none">
 
-<div class="fixed top-0 w-full text-gray-700 bg-gray-100 dark-mode:text-gray-200 dark-mode:bg-gray-800">
-    <div x-data="{ open: false }" class="border-b-2 border-gray-200 flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 md:py-2">
+<div id="nav" class="fixed top-0 w-full text-gray-700 bg-gray-100">
+    <div id="navBorder" x-data="{ open: false }" class="border-b-2 border-gray-200 flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 md:py-2">
       <div class="flex flex-row items-center justify-between p-4">
-        <a href="/" class="text-lg font-semibold uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><strong class="text-gray-600">ER</strong></a>
+        <a  href="/" class="text-lg font-semibold uppercase rounded-lg focus:outline-none focus:shadow-outline"><strong id="dark-color-white" class="text-gray-600">ER</strong></a>
+        <button class="switch lg:ml-12" id="switch">
+          <span><i class="fas fa-sun"></i></span>
+          <span><i class="fas fa-moon"></i></span>
+        </button>
         <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
           <svg fill="currentColor" viewBox="0 0 20 20" class="text-gray-600 w-6 h-6">
             <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -51,11 +56,6 @@
           </svg>
         </button>
       </div>
-
-      <button class="switch" id="switch">
-        <span><i class="fas fa-sun"></i></span>
-        <span><i class="fas fa-moon"></i></span>
-      </button>
 
       <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
 
@@ -66,22 +66,22 @@
           </div>
         </div>
 
-        <a @click="open = true" class="px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 text-gray-700   hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline {{ request()->is('blog') ? 'bg-gray-200' : '' }}" href="{{ route('pages.home') }}">
+        <a  id="dark-color-white" @click="open = true" class="px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 text-gray-700   hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline {{ request()->is('blog') ? 'bg-gray-200' : '' }}" href="{{ route('pages.home') }}">
           Blog
         </a>
 
         @guest
-          <a class="px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 text-gray-700  hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline {{ request()->is('login') ? 'bg-gray-200' : '' }}" href="{{ route('login') }}">
+          <a id="dark-color-white" class="px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 text-gray-700  hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline {{ request()->is('login') ? 'bg-gray-200' : '' }}" href="{{ route('login') }}">
             {{ __('Login') }}
           </a>
           @if (Route::has('register'))
-            <a class="px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 text-gray-700  hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline {{ request()->is('register') ? 'bg-gray-200' : '' }}" href="{{ route('register') }}">
+            <a id="dark-color-white" class="px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 text-gray-700  hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline {{ request()->is('register') ? 'bg-gray-200' : '' }}" href="{{ route('register') }}">
               {{ __('Register') }}
             </a>
           @endif
         @else
           <div @click.away="open = false" class="relative" x-data="{ open: false }">
-            <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-base font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 text-gray-700   hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+            <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-base font-semibold text-left bg-transparent rounded-lg    md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 text-gray-700   hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
               <span class="">{{ Auth::user()->name }}</span>
               <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1 text-gray-600"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
@@ -119,6 +119,30 @@
 {{-- Aqui no lo envuelvo porque no funciona al momento de mostrar código en ckEditor --}}
   @yield('content')
 
+  <script>
+    const btnSwitch = document.querySelector('#switch');
+
+    btnSwitch.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      btnSwitch.classList.toggle('active');
+
+      // Guardamos el modo en localstorage.
+      if(document.body.classList.contains('dark')){
+        localStorage.setItem('dark-mode', 'true');
+      } else {
+        localStorage.setItem('dark-mode', 'false');
+      }
+    });
+
+    // Obtenemos el modo actual.
+    if(localStorage.getItem('dark-mode') === 'true'){
+      document.body.classList.add('dark');
+      btnSwitch.classList.add('active');
+    } else {
+      document.body.classList.remove('dark');
+      btnSwitch.classList.remove('active');
+    }
+  </script>
 
 </body>
 </html>

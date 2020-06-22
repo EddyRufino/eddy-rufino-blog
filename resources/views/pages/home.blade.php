@@ -7,7 +7,7 @@
 
   <div class="my-4 font-medium lg:px-10">
     @if (isset($title))
-      <h3>{{$title}}</h3>
+      <h3 id="dark-color-white">{{$title}}</h3>
     @endif
   </div>
 
@@ -18,7 +18,7 @@
     <div class="lg:flex pb-2 lg:px-10 card md:mx-auto xl:mx-0">
       <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/img/card-left.jpg')" title="Woman holding a mug">
       </div>
-      <div class="w-full border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div id="header" class="w-full border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
         <div class="mb-8">
           <p class="text-sm text-gray-600 flex items-center">
             {{-- <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -29,8 +29,8 @@
             </svg>
             @include('posts.tags')
           </p>
-          <a href="{{ route('posts.show', $post) }}" class="text-gray-800 font-bold text-xl mb-2">{{ $post->title }}</a>
-          <p class="text-gray-700 text-base">{{ $post->excerpt }}</p>
+          <a id="dark-color-white" href="{{ route('posts.show', $post) }}" class="text-gray-800 font-bold text-xl mb-2">{{ $post->title }}</a>
+          <p id="dark-color-white" class="text-gray-700 text-base">{{ $post->excerpt }}</p>
         </div>
         <div class="flex items-center">
           <img class="w-10 h-10 rounded-full mr-4" src="/img/yo.svg" alt="Avatar of Jonathan Reinink">

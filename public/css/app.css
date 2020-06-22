@@ -18218,7 +18218,7 @@ pre {
   }
 }
 
-/* Modo dark */
+/* Botones para el modo dark */
 
 .switch {
   background: #343D5B;
@@ -18262,6 +18262,45 @@ pre {
   display: block;
   background: none;
   color: #fff;
+}
+
+/* Modo dark */
+
+body.dark {
+  background: #1A202C;
+}
+
+body.dark #nav {
+  background: #1A202C;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+}
+
+body.dark #navBorder {
+  border-bottom: 0;
+}
+
+body.dark #header {
+  background: #1A202C;
+}
+
+body.dark #headerImg {
+  display: none;
+}
+
+body.dark #headerSpace {
+  display: block;
+}
+
+body.dark #dark-color-white {
+  color: #F7FAFC;
+}
+
+body.dark nav a {
+  color: #C8C8C8;
+}
+
+body.dark nav a:hover {
+  color: #FEFEFE;
 }
 
 @media (min-width: 640px) {

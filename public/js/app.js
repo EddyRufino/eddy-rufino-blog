@@ -20372,9 +20372,14 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("ul", [
     _c("li", { staticClass: "pb-2" }, [
-      _c("a", { staticClass: "hover:underline", attrs: { href: "#" } }, [
-        _vm._v(_vm._s(_vm.repo.title))
-      ])
+      _c(
+        "a",
+        {
+          staticClass: "hover:underline",
+          attrs: { id: "dark-color-white", href: "#" }
+        },
+        [_vm._v(_vm._s(_vm.repo.title))]
+      )
     ])
   ])
 }
@@ -20404,14 +20409,20 @@ var render = function() {
     "div",
     {
       staticClass:
-        "mb-8 leading-normal text-center text-xl text-gray-800 bg-gray-100 p-3 flex items-center flex-col justify-center"
+        "mb-8 leading-normal text-center text-xl text-gray-800 bg-gray-100 p-3 flex items-center flex-col justify-center",
+      attrs: { id: "header" }
     },
     [
-      _c("h1", { staticClass: "font-bold text-gray-800 text-3xl" }, [
-        _vm._v("Mi trabajo")
-      ]),
+      _c(
+        "h1",
+        {
+          staticClass: "font-bold text-gray-800 text-3xl",
+          attrs: { id: "dark-color-white" }
+        },
+        [_vm._v("Mi trabajo")]
+      ),
       _vm._v(" "),
-      _c("p", { staticClass: "mb-3" }, [
+      _c("p", { staticClass: "mb-3", attrs: { id: "dark-color-white" } }, [
         _vm._v("Colaboracón y contribución de código")
       ]),
       _vm._v(" "),

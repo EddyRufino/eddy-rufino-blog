@@ -4,9 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use Laravel\Scout\Searchable;
 
 class Post extends Model
 {
+
+  use Searchable;
 
     protected $fillable = [
       'title', 'body', 'iframe', 'excerpt', 'published_at', 'category_id', 'user_id'

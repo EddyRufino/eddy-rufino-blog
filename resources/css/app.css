@@ -10,6 +10,14 @@
 
 @import "tailwindcss/utilities"; */
 
+/* blockquote */
+blockquote {
+  border-left: solid 5px #4FD1C5;
+  margin-left: 1em;
+  padding: 1rem;
+  font-style: oblique;
+}
+
 @media (min-width: 768px) { 
   .search {
     width: 20rem;
@@ -168,8 +176,16 @@ body.dark #headerSpace {
   display: block;
 }
 
+body.dark #dark-color-white-logo {
+  color: #F7FAFC;
+}
+
 body.dark #dark-color-white {
   color: #F7FAFC;
+}
+
+body.dark #dark-color-white:hover {
+  color: #1A202C;
 }
 
 body.dark nav a {

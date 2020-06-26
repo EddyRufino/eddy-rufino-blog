@@ -16,7 +16,9 @@
     @foreach ($posts as $post)
 
     <div class="lg:flex pb-2 lg:px-10 card md:mx-auto xl:mx-0">
-      <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/img/card-left.jpg')" title="Woman holding a mug">
+      <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover bg-center rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+            style="background-image: url('{{ $post->photos->first()->url }}')"
+            title="{{ $post->title }}">
       </div>
       <div id="header" class="w-full border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
         <div class="mb-8">
@@ -30,7 +32,7 @@
             @include('posts.tags')
           </p>
           <a id="dark-color-white" href="{{ route('posts.show', $post) }}" class="text-gray-800 font-bold text-xl mb-2">{{ $post->title }}</a>
-          <p id="dark-color-white" class="text-gray-700 text-base">{{ $post->excerpt }}</p>
+          <p id="dark-color-white" class="text-gray-700 text-base">{{ Illuminate\Support\str::limit($post->excerpt, 82) }}</p>
         </div>
         <div class="flex items-center">
           <img class="w-10 h-10 rounded-full mr-4" src="/img/yo.svg" alt="Avatar of Jonathan Reinink">

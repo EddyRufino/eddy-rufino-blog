@@ -9,6 +9,7 @@ use App\Http\Requests\UpdateUserRequest;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use App\Providers\UserWasCreated;
+use Illuminate\Support\Arr;
 
 class UsersController extends Controller
 {
@@ -58,7 +59,8 @@ class UsersController extends Controller
         ]);
 
       //Generar contraseña
-        $data['password'] = str_random(8);
+        // $data['password'] = str_random(8);
+        $data['password'] = Arr::random(8);
 
       //Creamos el usuario
         $user = User::create($data);
@@ -76,7 +78,7 @@ class UsersController extends Controller
       }
 
       // Enviamos el email
-        UserWasCreated::dispatch($user, $data['password']);
+        // UserWasCreated::dispatch($user, $data['password']);
 
       // Retornamos al usuario
         return redirect()->route('admin.users.index')->withFlash('El usuario ha sido creado');
